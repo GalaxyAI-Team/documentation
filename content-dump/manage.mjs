@@ -2,13 +2,22 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const sourceDir = import.meta.dirname;
-const repoRoot = path.resolve(sourceDir, "..");
+const managerDir = import.meta.dirname;
+const repoRoot = path.resolve(managerDir, "..");
+const sourceDir = repoRoot;
 const docsJsonPath = path.join(repoRoot, "docs.json");
 const indexPath = path.join(repoRoot, "index.mdx");
 const envPath = path.join(repoRoot, ".env");
 const mintlifyProjectId = "69fc4d9bd752271a22466d00";
 const shouldDeploy = process.argv.includes("--deploy");
+const ignoredRootDirs = new Set([
+  ".git",
+  ".mintlify",
+  ".next",
+  "content-dump",
+  "logo",
+  "node_modules",
+]);
 
 const categoryIcons = new Map([
   ["Getting Started", "rocket"],
@@ -83,7 +92,7 @@ function renderDocsJson(categories) {
   const docsJson = JSON.parse(fs.readFileSync(docsJsonPath, "utf8"));
   docsJson.name = "Magica Help Center";
   docsJson.description =
-    "Guides and answers for Magica customers, managed from content-dump.";
+    "Guides and answers for Magica account access, billing, credits, tools, privacy, and troubleshooting.";
   docsJson.logo = {
     dark: "/logo/logo_dark_theme.svg",
     light: "/logo/logo_light_theme.svg",
@@ -132,15 +141,16 @@ function renderIndex(categories) {
     })
     .join("\n");
 
-  return `---\ntitle: "Magica Help Center"\ndescription: "Customer support articles for Magica account access, billing, credits, tools, privacy, and troubleshooting."\n---\n\nSearch or browse Magica customer support articles. The article bodies live once in \`content-dump\`; Crisp sync reads that same folder directly.\n\n<CardGroup cols={2}>\n${cards}\n</CardGroup>\n`;
+  return `---\ntitle: "Magica Help Center"\ndescription: "Customer support articles for Magica account access, billing, credits, tools, privacy, and troubleshooting."\n---\n\nSearch or browse Magica customer support articles.\n\n<CardGroup cols={2}>\n${cards}\n</CardGroup>\n`;
 }
 
 function main() {
-  assertDirectory(sourceDir, "content-dump");
+  assertDirectory(managerDir, "content-dump");
 
   const categories = [];
 
   for (const categorySlug of fs.readdirSync(sourceDir).sort()) {
+    if (categorySlug.startsWith(".") || ignoredRootDirs.has(categorySlug)) continue;
     const categoryDir = path.join(sourceDir, categorySlug);
     if (!fs.statSync(categoryDir).isDirectory()) continue;
 
@@ -152,7 +162,7 @@ function main() {
 
       const article = parseFrontmatter(path.join(categoryDir, fileName));
       categoryName = article.data.category;
-      const page = `content-dump/${categorySlug}/${fileName.replace(/\.mdx$/, "")}`;
+      const page = `${categorySlug}/${fileName.replace(/\.mdx$/, "")}`;
 
       pages.push(page);
     }

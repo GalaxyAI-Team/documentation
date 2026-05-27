@@ -6,7 +6,7 @@ This repository is the public customer help center for Magica. It should explain
 
 The developer API documentation lives in `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` and is published separately at `https://magica.com/docs`.
 
-The canonical editable customer-help articles live in `content-dump`. Mintlify reads those files directly, and Crisp sync reads the same folder directly.
+The canonical editable customer-help articles live once in the root category folders. Mintlify reads those files directly for clean URLs, and Crisp sync reads the same files directly.
 
 ## Canonical sources
 
@@ -31,13 +31,13 @@ Do not use Galaxy.ai branding except in a dedicated rebrand article or migration
 
 ## Single-source system design
 
-Maintain one canonical article inventory in `content-dump`:
+Maintain one canonical article inventory in root category folders:
 
-- Source and Mintlify page: `content-dump/{category-slug}/{slug}.mdx`.
-- Crisp output: no local article copy. `/Users/rajatgupta/Downloads/g-repo/work/crisp/sync.py` reads `content-dump` directly and pushes to Crisp.
+- Source and Mintlify page: `{category-slug}/{slug}.mdx`.
+- Crisp output: no local article copy. `/Users/rajatgupta/Downloads/g-repo/work/crisp/sync.py` reads the root category folders directly and pushes to Crisp.
 - API docs remain separate developer references in `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs`.
 
-For shared customer knowledge, canonical facts are represented once in `content-dump`:
+For shared customer knowledge, canonical facts are represented once in the root category article files:
 
 - Mintlify uses the same MDX pages directly.
 - Crisp receives the same content through `/Users/rajatgupta/Downloads/g-repo/work/crisp/sync.py`.
@@ -45,14 +45,15 @@ For shared customer knowledge, canonical facts are represented once in `content-
 Current layout:
 
 ```text
+account-and-platform-features/
+billing-and-subscription/
+credits-and-usage-tracking/
+data-privacy-and-security/
+getting-started/
+integrations-and-api/
+troubleshooting-and-technical-issues/
 content-dump/
-+-- account-and-platform-features/
-+-- billing-and-subscription/
-+-- credits-and-usage-tracking/
-+-- data-privacy-and-security/
-+-- getting-started/
-+-- integrations-and-api/
-+-- troubleshooting-and-technical-issues/
++-- manage.mjs
 ```
 
 Each source article uses Mintlify frontmatter plus Crisp export metadata:
@@ -69,11 +70,11 @@ Magica uses a credits-based system...
 
 The sync pipeline should:
 
-1. Edit only `content-dump`.
+1. Edit only the root category article files.
 2. Run `node content-dump/manage.mjs`.
 3. Review Mintlify navigation in `docs.json`.
 4. Run `mint broken-links` for customer docs when Mintlify is available.
-5. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes directly from `content-dump`.
+5. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes directly from the same root category files.
 6. Run `python3 sync.py --push` only when intentionally publishing to Crisp.
 7. After committing and pushing documentation changes, run `node content-dump/manage.mjs --deploy` to trigger Mintlify. The API key must come from `.env` or `MINTLIFY_API_KEY`; never commit it.
 
