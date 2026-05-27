@@ -1,0 +1,207 @@
+---
+title: Galaxy.ai Help Center
+description: Find answers about your subscription, credits, AI tools, billing, and account settings — all in one place.
+mode: custom
+---
+
+<div className="mx-auto flex w-full max-w-5xl flex-col gap-14 px-4 py-12 lg:py-16">
+  <div className="flex flex-col items-center gap-12">
+    <div className="flex w-full max-w-lg flex-col gap-1">
+      <h1 className="text-center text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-50">
+        How can we help?
+      </h1>
+      <p className="text-center text-balance text-base text-gray-600 dark:text-gray-400 mt-2">
+        Search the Galaxy.ai Help Center for guides on credits, AI tools, billing, account settings, and troubleshooting.
+      </p>
+    </div>
+
+    <div className="flex w-full max-w-lg flex-col gap-4">
+      <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:items-stretch">
+        <div className="kb-search-entry min-w-0 w-full flex-1">
+          <button
+            type="button"
+            data-search-trigger
+            className="pointer-events-auto flex h-11 w-full cursor-pointer items-center justify-between gap-2 truncate rounded-full bg-gray-50 pl-4 pr-3 text-left text-sm font-normal leading-6 text-gray-500 shadow-none hover:text-gray-500 ring-1 ring-gray-100 hover:ring-gray-200 dark:bg-white/[0.04] dark:text-white/50 dark:hover:text-white/50 dark:ring-1 dark:ring-white/[0.08] dark:hover:ring-white/15"
+          >
+            <div className="flex min-w-0 flex-1 items-center gap-2">
+              <Icon
+                icon="search"
+                size={14}
+                className="shrink-0 text-gray-700 dark:text-gray-400"
+              />
+              <div className="min-w-0 truncate font-normal text-gray-500 hover:text-gray-500 dark:text-white/50 dark:hover:text-white/50">
+                Search for articles
+              </div>
+            </div>
+            <span className="flex-none text-xs font-semibold text-gray-500 hover:text-gray-500 dark:text-white/50 dark:hover:text-white/50">
+              ⌘K
+            </span>
+          </button>
+        </div>
+
+        <button
+          type="button"
+          id="custom-homepage-assistant-entry"
+          data-assistant-trigger
+          aria-label="Ask AI"
+          className="group/ai flex pointer-events-auto h-11 w-full shrink-0 cursor-pointer flex-row items-center justify-center gap-1.5 rounded-full bg-gray-50 px-4 text-sm font-normal leading-6 text-gray-500 shadow-none ring-1 ring-gray-100 hover:text-gray-600 hover:ring-gray-200 dark:bg-white/[0.04] dark:text-white/50 dark:ring-1 dark:ring-white/[0.08] dark:hover:text-white/70 dark:hover:ring-white/15 sm:w-auto"
+        >
+          <Icon
+            icon="sparkles"
+            size={16}
+            className="shrink-0 text-gray-700 group-hover/ai:text-gray-800 dark:text-gray-400 dark:group-hover/ai:text-gray-200"
+          />
+          <span className="whitespace-nowrap text-gray-500 dark:text-white/50">Ask AI</span>
+        </button>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-500 dark:text-gray-400">
+        <span>Popular searches</span>
+        <div className="flex flex-wrap justify-center gap-1">
+          {['credits', 'billing', 'headshots'].map((term) => (
+            <button
+              key={term}
+              type="button"
+              data-popular-search
+              data-term={term}
+              className="rounded-md bg-gray-100 px-1.5 py-1 font-mono text-xs font-bold uppercase tracking-tight text-gray-600 transition hover:bg-gray-200 dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/15"
+            >
+              {term.toUpperCase()}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div className="flex flex-col gap-4">
+    <h3 className="text-base font-medium text-gray-900 dark:text-gray-50">Featured guides</h3>
+    <Columns cols={3}>
+      <Card
+        horizontal
+        icon="rocket"
+        iconType="light"
+        title="Getting Started"
+        href="/getting-started/introduction"
+      >
+        New to Galaxy.ai? Start here for plans, setup, and first steps.
+      </Card>
+      <Card horizontal icon="credit-card" iconType="light" title="Credits & Billing" href="/credits/how-credits-work">
+        Understand credits, track usage, manage your subscription.
+      </Card>
+      <Card horizontal icon="sparkles" iconType="light" title="AI Tools" href="/tools/overview">
+        Chat, image, video, headshots, and 5,000+ more AI tools.
+      </Card>
+    </Columns>
+  </div>
+
+  ---
+
+  <div className="flex flex-col gap-4">
+    <h3 className="text-base font-medium text-gray-900 dark:text-gray-50">All guides</h3>
+    <Columns cols={3}>
+    <Card
+      title="Account & Settings"
+      icon="settings"
+      iconType="light"
+      href="/account/manage-account"
+      cta="4 articles"
+    >
+      Manage your profile, workspace, memories, and history
+    </Card>
+    <Card
+      title="Privacy & Security"
+      icon="shield-check"
+      iconType="light"
+      href="/security/data-privacy"
+      cta="2 articles"
+    >
+      Data privacy, SOC 2, GDPR, and content ownership
+    </Card>
+    <Card
+      title="Troubleshooting"
+      icon="wrench"
+      iconType="light"
+      href="/troubleshooting/common-errors"
+      cta="4 articles"
+    >
+      Fix errors, login issues, billing problems, and get support
+    </Card>
+    <Card
+      title="Image Generation"
+      icon="image"
+      iconType="light"
+      href="/tools/image-generation"
+      cta="Read guide"
+    >
+      DALL-E 3, Midjourney, Stable Diffusion, Flux, and Ideogram
+    </Card>
+    <Card
+      title="Video Generation"
+      icon="video"
+      iconType="light"
+      href="/tools/video-generation"
+      cta="Read guide"
+    >
+      Create videos, reels, talking photos, and UGC ads
+    </Card>
+    <Card
+      title="Affiliate Program"
+      icon="share-2"
+      iconType="light"
+      href="/affiliate/getting-started"
+      cta="2 articles"
+    >
+      Earn commissions by referring new Galaxy.ai subscribers
+    </Card>
+    </Columns>
+  </div>
+
+  ---
+
+  <div className="flex flex-col gap-2">
+    <h3 className="text-base font-medium text-gray-900 dark:text-gray-50">Suggested articles</h3>
+    <p className="text-base text-gray-600 dark:text-gray-400">
+      Popular starting points from the Help Center
+    </p>
+  </div>
+
+  <Columns cols={2} className="suggested-articles">
+    <Card
+      title="How credits work on Galaxy.ai"
+      icon="coins"
+      iconType="light"
+      href="/credits/how-credits-work"
+      cta="Read article"
+    >
+      Learn how AI credits are calculated, when they renew, and how to track usage.
+    </Card>
+    <Card
+      title="Cancel or change your subscription"
+      icon="x-circle"
+      iconType="light"
+      href="/billing/cancel-subscription"
+      cta="Read article"
+    >
+      Step-by-step instructions to cancel via website or mobile app.
+    </Card>
+    <Card
+      title="Galaxy.ai plans and pricing"
+      icon="tag"
+      iconType="light"
+      href="/getting-started/plans-and-pricing"
+      cta="Read article"
+    >
+      Compare monthly, annual, lifetime, and team plans side by side.
+    </Card>
+    <Card
+      title="AI headshot generator guide"
+      icon="user-circle"
+      iconType="light"
+      href="/tools/headshots"
+      cta="Read article"
+    >
+      Generate professional AI headshots and understand credit costs.
+    </Card>
+  </Columns>
+</div>

@@ -1,0 +1,108 @@
+{
+  "projectType": "saas",
+  "projectName": "Galaxy.ai",
+  "projectDescription": "Galaxy.ai is an AI aggregator platform that provides a single subscription for access to 5,000+ AI tools including ChatGPT, Gemini, Claude, image generators, video creators, and more.",
+  "theme": "almond",
+  "primaryColor": "#6C47FF",
+  "lightColor": "#EDE9FF",
+  "darkColor": "#3B1FA8",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Help Center",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "getting-started/introduction",
+              "getting-started/plans-and-pricing",
+              "getting-started/mobile-app"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "pages": [
+              "account/manage-account",
+              "account/workspace-settings",
+              "account/memories",
+              "account/generation-history"
+            ]
+          },
+          {
+            "group": "Credits & Billing",
+            "pages": [
+              "credits/how-credits-work",
+              "credits/tracking-usage",
+              "billing/plans-overview",
+              "billing/cancel-subscription",
+              "billing/invoices-and-payments"
+            ]
+          },
+          {
+            "group": "AI Tools",
+            "pages": [
+              "tools/overview",
+              "tools/chat-and-text",
+              "tools/image-generation",
+              "tools/video-generation",
+              "tools/headshots"
+            ]
+          },
+          {
+            "group": "Privacy & Security",
+            "pages": [
+              "security/data-privacy",
+              "security/compliance"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-errors",
+              "troubleshooting/login-issues",
+              "troubleshooting/billing-issues",
+              "troubleshooting/contact-support"
+            ]
+          },
+          {
+            "group": "Affiliate Program",
+            "pages": [
+              "affiliate/getting-started",
+              "affiliate/tracking-and-commissions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Access to 5,000+ AI tools under one subscription",
+    "All major AI models: GPT-5, Claude, Gemini, Grok, and more",
+    "AI image generation (DALL-E 3, Midjourney, Stable Diffusion, Flux, Ideogram)",
+    "AI video generation (Runway, HeyGen, Veo3, and more)",
+    "AI headshot and portrait generator",
+    "AI music and audio generation (ElevenLabs)",
+    "Chat with documents, PDFs, images, and videos",
+    "Custom AI assistants (GPT builder)",
+    "Web search enabled chat",
+    "Memories and custom instructions for personalized AI responses",
+    "Prompt library and saved prompts",
+    "Commercial use rights for all generated content",
+    "Team plans with admin dashboard",
+    "Lifetime subscription option",
+    "Mobile apps for iOS and Android",
+    "100% private — data never used for training"
+  ],
+  "publicApiSurface": [
+    "galaxy.ai/docs — API documentation",
+    "galaxy.ai/usage — Credit usage dashboard",
+    "galaxy.ai/saved-prompts — Prompt management",
+    "galaxy.ai/refer — Affiliate program signup",
+    "affiliates.galaxy.ai — Affiliate dashboard",
+    "galaxy.ai/pricing — Subscription plans",
+    "galaxy.ai/support — Support ticket system",
+    "galaxy.ai/feature-requests — Feature request portal",
+    "galaxy.ai/delete-account — Account deletion",
+    "go.galaxy.ai/invoice — Invoice management"
+  ]
+}

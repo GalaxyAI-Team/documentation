@@ -1,0 +1,120 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Galaxy.ai Help Center",
+  "description": "Guides and answers for Galaxy.ai — the AI platform giving you access to 5,000+ AI tools in one subscription.",
+  "colors": {
+    "primary": "#6C47FF",
+    "light": "#EDE9FF",
+    "dark": "#3B1FA8"
+  },
+  "favicon": "https://icons.duckduckgo.com/ip3/help.galaxy.ai.ico",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "directory": "card",
+    "products": [
+      {
+        "product": "Help Center",
+        "description": "Getting started, account settings, credits, AI tools, and support.",
+        "icon": "life-buoy",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "expanded": true,
+            "root": "getting-started/introduction",
+            "pages": [
+              "getting-started/plans-and-pricing",
+              "getting-started/mobile-app"
+            ]
+          },
+          {
+            "group": "Account & Settings",
+            "icon": "settings",
+            "expanded": true,
+            "root": "account/manage-account",
+            "pages": [
+              "account/workspace-settings",
+              "account/memories",
+              "account/generation-history"
+            ]
+          },
+          {
+            "group": "Credits & Billing",
+            "icon": "credit-card",
+            "expanded": true,
+            "root": "credits/how-credits-work",
+            "pages": [
+              "credits/tracking-usage",
+              "billing/plans-overview",
+              "billing/cancel-subscription",
+              "billing/invoices-and-payments"
+            ]
+          },
+          {
+            "group": "AI Tools",
+            "icon": "sparkles",
+            "expanded": true,
+            "root": "tools/overview",
+            "pages": [
+              "tools/chat-and-text",
+              "tools/image-generation",
+              "tools/video-generation",
+              "tools/headshots"
+            ]
+          },
+          {
+            "group": "Privacy & Security",
+            "icon": "shield-check",
+            "expanded": true,
+            "root": "security/data-privacy",
+            "pages": [
+              "security/compliance"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "icon": "wrench",
+            "expanded": true,
+            "root": "troubleshooting/common-errors",
+            "pages": [
+              "troubleshooting/login-issues",
+              "troubleshooting/billing-issues",
+              "troubleshooting/contact-support"
+            ]
+          },
+          {
+            "group": "Affiliate Program",
+            "icon": "share-2",
+            "expanded": true,
+            "root": "affiliate/getting-started",
+            "pages": [
+              "affiliate/tracking-and-commissions"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Contact Support",
+        "href": "https://galaxy.ai/support"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Go to Galaxy.ai",
+      "href": "https://galaxy.ai"
+    }
+  }
+}
