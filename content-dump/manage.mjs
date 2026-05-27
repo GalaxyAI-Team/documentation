@@ -42,7 +42,7 @@ function parseFrontmatter(filePath) {
     data[key] = value;
   }
 
-  for (const key of ["title", "description", "category", "crispSlug"]) {
+  for (const key of ["title", "category", "crispSlug"]) {
     if (!data[key]) throw new Error(`Missing ${key} in ${filePath}`);
   }
 

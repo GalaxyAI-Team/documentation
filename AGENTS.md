@@ -34,16 +34,15 @@ Each article must have this frontmatter:
 ```mdx
 ---
 title: "How do credits work?"
-description: "Short customer-facing summary."
 category: "Credits & Usage Tracking"
 crispSlug: "how-do-credits-work"
 ---
 ```
 
 - `title` is used by Mintlify and Crisp.
-- `description` is used by Mintlify.
 - `category` must exactly match an existing Crisp category.
 - `crispSlug` preserves the Crisp manifest key and remote article mapping.
+- Do not add a `description` that repeats the opening sentence. Mintlify renders `description` as a subtitle, so repeated descriptions create duplicate visible text.
 
 ## Commands
 

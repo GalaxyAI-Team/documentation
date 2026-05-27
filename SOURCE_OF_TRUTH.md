@@ -60,7 +60,6 @@ Each source article uses Mintlify frontmatter plus Crisp export metadata:
 ```markdown
 ---
 title: "How do credits work?"
-description: "Magica uses a credits-based system..."
 category: "Credits & Usage Tracking"
 crispSlug: "how-do-credits-work"
 ---
