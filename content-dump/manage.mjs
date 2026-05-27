@@ -6,6 +6,9 @@ const sourceDir = import.meta.dirname;
 const repoRoot = path.resolve(sourceDir, "..");
 const docsJsonPath = path.join(repoRoot, "docs.json");
 const indexPath = path.join(repoRoot, "index.mdx");
+const envPath = path.join(repoRoot, ".env");
+const mintlifyProjectId = "69fc4d9bd752271a22466d00";
+const shouldDeploy = process.argv.includes("--deploy");
 
 const categoryIcons = new Map([
   ["Getting Started", "rocket"],
@@ -52,6 +55,28 @@ function writeFileIfChanged(filePath, content) {
     return false;
   fs.writeFileSync(filePath, content);
   return true;
+}
+
+function loadEnvFile() {
+  if (!fs.existsSync(envPath)) return;
+
+  const lines = fs.readFileSync(envPath, "utf8").split(/\r?\n/);
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#") || !trimmed.includes("=")) continue;
+
+    const separator = trimmed.indexOf("=");
+    const key = trimmed.slice(0, separator).trim();
+    let value = trimmed.slice(separator + 1).trim();
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    if (!process.env[key]) process.env[key] = value;
+  }
 }
 
 function renderDocsJson(categories) {
@@ -146,4 +171,38 @@ function main() {
   console.log("Run `cd ../crisp && python3 sync.py` to preview Crisp publishing from the same content-dump.");
 }
 
+async function triggerMintlifyDeploy() {
+  loadEnvFile();
+
+  const token = process.env.MINTLIFY_API_KEY;
+  if (!token) {
+    throw new Error(
+      "Missing MINTLIFY_API_KEY. Add it to .env or export it before running with --deploy.",
+    );
+  }
+
+  const response = await fetch(
+    `https://api.mintlify.com/v1/project/update/${mintlifyProjectId}`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  );
+
+  const body = await response.text();
+  if (!response.ok) {
+    throw new Error(
+      `Mintlify deployment trigger failed (${response.status}): ${body}`,
+    );
+  }
+
+  console.log(`Triggered Mintlify deployment: ${body}`);
+}
+
 main();
+
+if (shouldDeploy) {
+  await triggerMintlifyDeploy();
+}

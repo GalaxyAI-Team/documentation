@@ -76,5 +76,6 @@ The sync pipeline should:
 4. Run `mint broken-links` for customer docs when Mintlify is available.
 5. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes directly from `content-dump`.
 6. Run `python3 sync.py --push` only when intentionally publishing to Crisp.
+7. After committing and pushing documentation changes, run `node content-dump/manage.mjs --deploy` to trigger Mintlify. The API key must come from `.env` or `MINTLIFY_API_KEY`; never commit it.
 
 This keeps customer docs and Crisp aligned while preserving the different formats each destination needs.

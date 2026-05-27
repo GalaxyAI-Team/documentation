@@ -55,6 +55,20 @@ After editing, adding, moving, or deleting an article:
 node content-dump/manage.mjs
 ```
 
+After committing and pushing documentation changes, trigger a Mintlify deployment:
+
+```bash
+node content-dump/manage.mjs --deploy
+```
+
+Deployment notes:
+
+- The Mintlify project ID is configured in `content-dump/manage.mjs`.
+- The Mintlify admin API key must be provided as `MINTLIFY_API_KEY` in `.env` or the shell environment.
+- `.env` is gitignored and must never be committed.
+- `.env.example` documents the required variable without exposing a real key.
+- `--deploy` calls Mintlify's deployment update endpoint for the configured project.
+
 Validate Mintlify navigation resolves every article:
 
 ```bash
