@@ -22,8 +22,9 @@ toc-item[data-active-deepest] > a::before {
 #navbar a[href="/"] svg,
 #sidebar a[href="/"] img,
 #sidebar a[href="/"] svg {
-  max-width: 14rem;
-  height: auto;
+  width: auto !important;
+  height: 1.75rem !important;
+  max-width: 14rem !important;
 }
 
 /* topbar pill buttons: search, Ask AI, secondary CTA (Get support) */
