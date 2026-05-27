@@ -4,8 +4,8 @@
   "name": "Magica Help Center",
   "description": "Guides and answers for Magica account access, billing, credits, tools, privacy, and troubleshooting.",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo_dark_theme.svg",
+    "light": "/logo/logo_light_theme.svg"
   },
   "colors": {
     "primary": "#6366f1",
@@ -210,5 +210,8 @@
       "label": "Go to Magica",
       "href": "https://magica.com"
     }
+  },
+  "appearance": {
+    "default": "light"
   }
 }

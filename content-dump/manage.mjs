@@ -94,14 +94,17 @@ function renderDocsJson(categories) {
   docsJson.description =
     "Guides and answers for Magica account access, billing, credits, tools, privacy, and troubleshooting.";
   docsJson.logo = {
-    dark: "/logo/dark.svg",
-    light: "/logo/light.svg",
+    dark: "/logo/logo_dark_theme.svg",
+    light: "/logo/logo_light_theme.svg",
   };
   docsJson.favicon = "/logo/icon.png";
   docsJson.colors = {
     primary: "#6366f1",
     light: "#818cf8",
     dark: "#4f46e5",
+  };
+  docsJson.appearance = {
+    default: "light",
   };
   docsJson.navigation = {
     directory: "card",
