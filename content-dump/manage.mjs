@@ -149,8 +149,7 @@ function renderDocsJson(categories) {
           group: category.name,
           icon: categoryIcons.get(category.name) ?? "file-text",
           expanded: true,
-          root: category.pages[0],
-          pages: category.pages.slice(1),
+          pages: category.pages,
         })),
       },
       {

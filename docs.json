@@ -42,8 +42,8 @@
             "group": "Getting Started",
             "icon": "rocket",
             "expanded": true,
-            "root": "getting-started/what-can-i-do-with-magica",
             "pages": [
+              "getting-started/what-can-i-do-with-magica",
               "getting-started/can-i-try-it-out-before-i-decide-to-pay",
               "getting-started/can-i-use-magica-on-mobile-and-desktop",
               "getting-started/do-you-have-tutorials-to-help-me-get-started",
@@ -57,8 +57,8 @@
             "group": "Account & Platform Features",
             "icon": "settings",
             "expanded": true,
-            "root": "account-and-platform-features/are-there-tools-that-generate-videos-longer-than-5-seconds",
             "pages": [
+              "account-and-platform-features/are-there-tools-that-generate-videos-longer-than-5-seconds",
               "account-and-platform-features/are-these-free-plans-paid-plans-or-time-sharing",
               "account-and-platform-features/can-i-change-my-email-address",
               "account-and-platform-features/can-i-delete-my-personal-account-if-my-company-team-account-uses-the-same-email",
@@ -99,8 +99,8 @@
             "group": "Billing & Subscription",
             "icon": "credit-card",
             "expanded": true,
-            "root": "billing-and-subscription/can-i-get-a-refund",
             "pages": [
+              "billing-and-subscription/can-i-get-a-refund",
               "billing-and-subscription/can-i-share-my-lifetime-subscription-with-team-members",
               "billing-and-subscription/do-i-get-magica-free-with-my-samsung-galaxy-phone",
               "billing-and-subscription/do-you-accept-paypal",
@@ -127,8 +127,8 @@
             "group": "Credits & Usage Tracking",
             "icon": "coins",
             "expanded": true,
-            "root": "credits-and-usage-tracking/a-tool-used-millions-of-credits-but-didnt-produce-any-output",
             "pages": [
+              "credits-and-usage-tracking/a-tool-used-millions-of-credits-but-didnt-produce-any-output",
               "credits-and-usage-tracking/can-i-know-upfront-how-many-credits-a-task-will-use",
               "credits-and-usage-tracking/do-i-get-charged-for-failed-generations",
               "credits-and-usage-tracking/do-unused-credits-roll-over",
@@ -144,8 +144,8 @@
             "group": "Data Privacy & Security",
             "icon": "shield-check",
             "expanded": true,
-            "root": "data-privacy-and-security/are-the-generated-videos-and-images-visible-to-the-public",
             "pages": [
+              "data-privacy-and-security/are-the-generated-videos-and-images-visible-to-the-public",
               "data-privacy-and-security/do-you-use-my-data-to-train-your-tool",
               "data-privacy-and-security/is-there-soc2-and-gdpr-compliance-for-magica"
             ]
@@ -154,8 +154,8 @@
             "group": "Integrations & API",
             "icon": "plug",
             "expanded": true,
-            "root": "integrations-and-api/do-you-have-an-api",
             "pages": [
+              "integrations-and-api/do-you-have-an-api",
               "integrations-and-api/do-you-have-an-mcp-server"
             ]
           },
@@ -163,8 +163,8 @@
             "group": "Troubleshooting & Technical Issues",
             "icon": "wrench",
             "expanded": true,
-            "root": "troubleshooting-and-technical-issues/chat-with-pdf-not-working",
             "pages": [
+              "troubleshooting-and-technical-issues/chat-with-pdf-not-working",
               "troubleshooting-and-technical-issues/getting-an-error-what-should-i-do",
               "troubleshooting-and-technical-issues/how-do-i-start-a-support-ticket",
               "troubleshooting-and-technical-issues/how-do-i-talk-to-a-real-person",
@@ -181,8 +181,8 @@
             "group": "Affiliate Program",
             "icon": "share-2",
             "expanded": true,
-            "root": "affiliate-program/a-referral-isnt-showing-in-my-affiliate-dashboard",
             "pages": [
+              "affiliate-program/a-referral-isnt-showing-in-my-affiliate-dashboard",
               "affiliate-program/are-add-on-credits-included-in-affiliate-commissions",
               "affiliate-program/do-i-earn-commissions-from-both-website-and-mobile-app",
               "affiliate-program/how-can-i-track-my-affiliate-sales",
