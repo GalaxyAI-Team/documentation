@@ -39,6 +39,21 @@
         "icon": "life-buoy",
         "groups": [
           {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "expanded": true,
+            "root": "getting-started/what-can-i-do-with-magica",
+            "pages": [
+              "getting-started/can-i-try-it-out-before-i-decide-to-pay",
+              "getting-started/can-i-use-magica-on-mobile-and-desktop",
+              "getting-started/do-you-have-tutorials-to-help-me-get-started",
+              "getting-started/galaxy-is-rebranded-as-magica",
+              "getting-started/how-do-i-get-free-reward-credits",
+              "getting-started/how-is-this-so-cheap-whats-the-catch",
+              "getting-started/im-not-tech-savvy-will-this-be-too-complicated-for-me"
+            ]
+          },
+          {
             "group": "Account & Platform Features",
             "icon": "settings",
             "expanded": true,
@@ -78,18 +93,6 @@
               "account-and-platform-features/what-models-are-used-in-agent-chat",
               "account-and-platform-features/when-i-sign-in-it-says-i-have-been-banned",
               "account-and-platform-features/where-is-the-logout-button"
-            ]
-          },
-          {
-            "group": "Affiliate Program",
-            "icon": "share-2",
-            "expanded": true,
-            "root": "affiliate-program/a-referral-isnt-showing-in-my-affiliate-dashboard",
-            "pages": [
-              "affiliate-program/are-add-on-credits-included-in-affiliate-commissions",
-              "affiliate-program/do-i-earn-commissions-from-both-website-and-mobile-app",
-              "affiliate-program/how-can-i-track-my-affiliate-sales",
-              "affiliate-program/how-do-i-get-my-magica-affiliate-link"
             ]
           },
           {
@@ -148,20 +151,6 @@
             ]
           },
           {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "expanded": true,
-            "root": "getting-started/can-i-try-it-out-before-i-decide-to-pay",
-            "pages": [
-              "getting-started/can-i-use-magica-on-mobile-and-desktop",
-              "getting-started/do-you-have-tutorials-to-help-me-get-started",
-              "getting-started/galaxy-is-rebranded-as-magica",
-              "getting-started/how-do-i-get-free-reward-credits",
-              "getting-started/how-is-this-so-cheap-whats-the-catch",
-              "getting-started/im-not-tech-savvy-will-this-be-too-complicated-for-me"
-            ]
-          },
-          {
             "group": "Integrations & API",
             "icon": "plug",
             "expanded": true,
@@ -186,6 +175,18 @@
               "troubleshooting-and-technical-issues/is-unfair-advantage-for-lifetime",
               "troubleshooting-and-technical-issues/music-generator-not-working",
               "troubleshooting-and-technical-issues/why-isnt-the-prompt-library-included-in-my-lifetime-access"
+            ]
+          },
+          {
+            "group": "Affiliate Program",
+            "icon": "share-2",
+            "expanded": true,
+            "root": "affiliate-program/a-referral-isnt-showing-in-my-affiliate-dashboard",
+            "pages": [
+              "affiliate-program/are-add-on-credits-included-in-affiliate-commissions",
+              "affiliate-program/do-i-earn-commissions-from-both-website-and-mobile-app",
+              "affiliate-program/how-can-i-track-my-affiliate-sales",
+              "affiliate-program/how-do-i-get-my-magica-affiliate-link"
             ]
           }
         ]

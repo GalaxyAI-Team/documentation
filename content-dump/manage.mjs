@@ -30,6 +30,37 @@ const categoryIcons = new Map([
   ["Affiliate Program", "share-2"],
 ]);
 
+const categoryOrder = new Map(
+  [
+    "Getting Started",
+    "Account & Platform Features",
+    "Billing & Subscription",
+    "Credits & Usage Tracking",
+    "Data Privacy & Security",
+    "Integrations & API",
+    "Troubleshooting & Technical Issues",
+    "Affiliate Program",
+  ].map((category, index) => [category, index]),
+);
+
+function compareCategories(a, b) {
+  const aIndex = categoryOrder.get(a.name) ?? Number.MAX_SAFE_INTEGER;
+  const bIndex = categoryOrder.get(b.name) ?? Number.MAX_SAFE_INTEGER;
+  if (aIndex !== bIndex) return aIndex - bIndex;
+  return a.name.localeCompare(b.name);
+}
+
+const priorityPages = new Map([
+  ["getting-started/what-can-i-do-with-magica", 0],
+]);
+
+function comparePages(a, b) {
+  const aIndex = priorityPages.get(a) ?? Number.MAX_SAFE_INTEGER;
+  const bIndex = priorityPages.get(b) ?? Number.MAX_SAFE_INTEGER;
+  if (aIndex !== bIndex) return aIndex - bIndex;
+  return a.localeCompare(b);
+}
+
 function assertDirectory(dir, label) {
   if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory())
     throw new Error(`${label} directory does not exist: ${dir}`);
@@ -177,11 +208,12 @@ function main() {
     }
 
     if (pages.length) {
+      pages.sort(comparePages);
       categories.push({ name: categoryName, pages, count: pages.length });
     }
   }
 
-  categories.sort((a, b) => a.name.localeCompare(b.name));
+  categories.sort(compareCategories);
   writeFileIfChanged(docsJsonPath, renderDocsJson(categories));
   writeFileIfChanged(indexPath, renderIndex(categories));
 
