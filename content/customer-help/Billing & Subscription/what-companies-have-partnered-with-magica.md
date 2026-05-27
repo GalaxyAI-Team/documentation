@@ -1,4 +1,0 @@
-<!--
-title: What companies have partnered with Magica?
--->
-Magica has partnered with leading AI companies including OpenAI, Google, Anthropic, xAI, Midjourney, Stable Diffusion, HeyGen, ElevenLabs, Runway, and more. We're trusted by brands like Logitech, Meta, Snap, TikTok, Forbes, TechCrunch, Business Insider, plus over 1.2M creators and businesses worldwide.

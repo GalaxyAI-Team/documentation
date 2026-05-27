@@ -1,4 +1,0 @@
-<!--
-title: Can I use Magica on mobile and desktop?
--->
-Absolutely! 📱 We’ve got apps for both [iOS](https://go.magica.com/iOS) and [Android](https://go.magica.com/android). Plus, you can always access Magica from your browser, anytime, anywhere. No device limits—use it wherever you like.

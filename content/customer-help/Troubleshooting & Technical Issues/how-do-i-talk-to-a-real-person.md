@@ -1,8 +1,0 @@
-<!--
-title: How do I talk to a real person?
--->
-**Web users:** Raise a ticket at [magica.com/support](https://magica.com/support) (only way for website-related issues).
-
-**Mobile app users:** Email **app@magica.com**
-
-Response typically within 48 hours.

@@ -1,4 +1,0 @@
-<!--
-title: What does error code 422 mean?
--->
-A "422 error" means the model provider is rejecting the inputs — not something you did wrong. Try tweaking your prompt or switching to a different model.

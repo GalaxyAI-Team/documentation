@@ -1,4 +1,0 @@
-<!--
-title: Audio in video generator comes out as gibberish
--->
-Most video models except **Veo3** don't support spoken audio. For spoken audio in videos, **Veo3** or **Veo3 Fast** are your best bet.

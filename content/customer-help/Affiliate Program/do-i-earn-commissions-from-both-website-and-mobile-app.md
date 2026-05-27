@@ -1,4 +1,0 @@
-<!--
-title: Do I earn commissions from both website and mobile app?
--->
-Yes — commissions are earned from purchases on both the website and mobile app.

@@ -1,0 +1,149 @@
+#!/usr/bin/env node
+import fs from "node:fs";
+import path from "node:path";
+
+const sourceDir = import.meta.dirname;
+const repoRoot = path.resolve(sourceDir, "..");
+const docsJsonPath = path.join(repoRoot, "docs.json");
+const indexPath = path.join(repoRoot, "index.mdx");
+
+const categoryIcons = new Map([
+  ["Getting Started", "rocket"],
+  ["Account & Platform Features", "settings"],
+  ["Billing & Subscription", "credit-card"],
+  ["Credits & Usage Tracking", "coins"],
+  ["Data Privacy & Security", "shield-check"],
+  ["Integrations & API", "plug"],
+  ["Troubleshooting & Technical Issues", "wrench"],
+  ["Affiliate Program", "share-2"],
+]);
+
+function assertDirectory(dir, label) {
+  if (!fs.existsSync(dir) || !fs.statSync(dir).isDirectory())
+    throw new Error(`${label} directory does not exist: ${dir}`);
+}
+
+function parseFrontmatter(filePath) {
+  const text = fs.readFileSync(filePath, "utf8").replace(/\r\n/g, "\n");
+  const match = text.match(/^---\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/);
+  if (!match) throw new Error(`Missing YAML frontmatter: ${filePath}`);
+
+  const data = {};
+  for (const line of match[1].split("\n")) {
+    const separator = line.indexOf(":");
+    if (separator === -1) continue;
+    const key = line.slice(0, separator).trim();
+    let value = line.slice(separator + 1).trim();
+    if (value.startsWith('"') && value.endsWith('"'))
+      value = value.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, "\\");
+    data[key] = value;
+  }
+
+  for (const key of ["title", "description", "category", "crispSlug"]) {
+    if (!data[key]) throw new Error(`Missing ${key} in ${filePath}`);
+  }
+
+  return { data, body: match[2].trim() };
+}
+
+function writeFileIfChanged(filePath, content) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  if (fs.existsSync(filePath) && fs.readFileSync(filePath, "utf8") === content)
+    return false;
+  fs.writeFileSync(filePath, content);
+  return true;
+}
+
+function renderDocsJson(categories) {
+  const docsJson = JSON.parse(fs.readFileSync(docsJsonPath, "utf8"));
+  docsJson.name = "Magica Help Center";
+  docsJson.description =
+    "Guides and answers for Magica customers, managed from content-dump.";
+  docsJson.logo = {
+    dark: "/logo/logo_dark_theme.svg",
+    light: "/logo/logo_light_theme.svg",
+  };
+  docsJson.favicon = "/logo/icon.png";
+  docsJson.colors = {
+    primary: "#6366f1",
+    light: "#818cf8",
+    dark: "#4f46e5",
+  };
+  docsJson.navigation = {
+    directory: "card",
+    products: [
+      {
+        product: "Help Center",
+        description:
+          "Customer support articles for account access, billing, credits, tools, privacy, and troubleshooting.",
+        icon: "life-buoy",
+        groups: categories.map((category) => ({
+          group: category.name,
+          icon: categoryIcons.get(category.name) ?? "file-text",
+          expanded: true,
+          root: category.pages[0],
+          pages: category.pages.slice(1),
+        })),
+      },
+    ],
+  };
+  docsJson.navbar = {
+    links: [{ label: "Contact Support", href: "https://magica.com/support" }],
+    primary: {
+      type: "button",
+      label: "Go to Magica",
+      href: "https://magica.com",
+    },
+  };
+
+  return `${JSON.stringify(docsJson, null, 2)}\n`;
+}
+
+function renderIndex(categories) {
+  const cards = categories
+    .map((category) => {
+      const icon = categoryIcons.get(category.name) ?? "file-text";
+      return `  <Card title="${category.name}" icon="${icon}" href="/${category.pages[0]}">\n    ${category.count} customer support articles.\n  </Card>`;
+    })
+    .join("\n");
+
+  return `---\ntitle: "Magica Help Center"\ndescription: "Customer support articles for Magica account access, billing, credits, tools, privacy, and troubleshooting."\n---\n\nSearch or browse Magica customer support articles. The article bodies live once in \`content-dump\`; Crisp sync reads that same folder directly.\n\n<CardGroup cols={2}>\n${cards}\n</CardGroup>\n`;
+}
+
+function main() {
+  assertDirectory(sourceDir, "content-dump");
+
+  const categories = [];
+
+  for (const categorySlug of fs.readdirSync(sourceDir).sort()) {
+    const categoryDir = path.join(sourceDir, categorySlug);
+    if (!fs.statSync(categoryDir).isDirectory()) continue;
+
+    const pages = [];
+    let categoryName = "";
+
+    for (const fileName of fs.readdirSync(categoryDir).sort()) {
+      if (!fileName.endsWith(".mdx")) continue;
+
+      const article = parseFrontmatter(path.join(categoryDir, fileName));
+      categoryName = article.data.category;
+      const page = `content-dump/${categorySlug}/${fileName.replace(/\.mdx$/, "")}`;
+
+      pages.push(page);
+    }
+
+    if (pages.length) {
+      categories.push({ name: categoryName, pages, count: pages.length });
+    }
+  }
+
+  categories.sort((a, b) => a.name.localeCompare(b.name));
+  writeFileIfChanged(docsJsonPath, renderDocsJson(categories));
+  writeFileIfChanged(indexPath, renderIndex(categories));
+
+  const count = categories.reduce((sum, category) => sum + category.count, 0);
+  console.log(`Rendered Mintlify navigation from ${count} content-dump articles.`);
+  console.log("Run `cd ../crisp && python3 sync.py` to preview Crisp publishing from the same content-dump.");
+}
+
+main();

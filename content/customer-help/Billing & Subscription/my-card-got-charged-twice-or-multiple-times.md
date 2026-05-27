@@ -1,4 +1,0 @@
-<!--
-title: My card got charged twice or multiple times
--->
-Stripe automatically flags duplicate charges, and you should see a refund from Stripe within 3–5 business days. Let us know if you don't receive it by then.

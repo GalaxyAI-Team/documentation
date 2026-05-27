@@ -1,4 +1,0 @@
-<!--
-title: What happens to my existing paid accounts at ChatGPT and others?
--->
-Nothing changes. Magica is an independent **AI aggregator platform**, not an account reseller or login-sharing service. We don't access or interfere with your other subscriptions. You can continue using them or cancel them once you switch.

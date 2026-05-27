@@ -1,6 +1,0 @@
-<!--
-title: How do I get my Magica affiliate link?
--->
-To get your Magica referral link, you need to sign up for the affiliate program here: [https://magica.com/refer](https://magica.com/refer)
-
-Once you're signed up and approved, you'll get access to your unique referral link and dashboard to track clicks, signups, and commissions.
