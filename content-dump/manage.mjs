@@ -119,6 +119,12 @@ function renderDocsJson(categories) {
           pages: category.pages.slice(1),
         })),
       },
+      {
+        product: "API/MCP Docs",
+        description: "Developer API, MCP, and automation documentation.",
+        icon: "code-2",
+        href: "https://magica.com/docs",
+      },
     ],
   };
   docsJson.navbar = {
@@ -177,8 +183,8 @@ function main() {
   writeFileIfChanged(indexPath, renderIndex(categories));
 
   const count = categories.reduce((sum, category) => sum + category.count, 0);
-  console.log(`Rendered Mintlify navigation from ${count} content-dump articles.`);
-  console.log("Run `cd ../crisp && python3 sync.py` to preview Crisp publishing from the same content-dump.");
+  console.log(`Rendered Mintlify navigation from ${count} customer articles.`);
+  console.log("Run `cd ../crisp && python3 sync.py` to preview Crisp publishing from the same articles.");
 }
 
 async function triggerMintlifyDeploy() {

@@ -188,6 +188,12 @@
             ]
           }
         ]
+      },
+      {
+        "product": "API/MCP Docs",
+        "description": "Developer API, MCP, and automation documentation.",
+        "icon": "code-2",
+        "href": "https://magica.com/docs"
       }
     ]
   },
