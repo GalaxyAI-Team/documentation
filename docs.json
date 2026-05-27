@@ -4,8 +4,8 @@
   "name": "Magica Help Center",
   "description": "Guides and answers for Magica account access, billing, credits, tools, privacy, and troubleshooting.",
   "logo": {
-    "dark": "/logo/logo_dark_theme.svg",
-    "light": "/logo/logo_light_theme.svg"
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
   },
   "colors": {
     "primary": "#6366f1",
@@ -23,9 +23,11 @@
     "options": [
       "copy",
       "view",
-      "assistant",
-      "mcp",
-      "add-mcp"
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "grok",
+      "aistudio"
     ]
   },
   "navigation": {
@@ -43,7 +45,6 @@
             "root": "account-and-platform-features/are-there-tools-that-generate-videos-longer-than-5-seconds",
             "pages": [
               "account-and-platform-features/are-these-free-plans-paid-plans-or-time-sharing",
-              "account-and-platform-features/audio-in-video-generator-comes-out-as-gibberish",
               "account-and-platform-features/can-i-change-my-email-address",
               "account-and-platform-features/can-i-delete-my-personal-account-if-my-company-team-account-uses-the-same-email",
               "account-and-platform-features/can-i-generate-headshots-with-2-people-in-the-photo",
@@ -51,7 +52,6 @@
               "account-and-platform-features/can-i-switch-to-dark-mode",
               "account-and-platform-features/can-i-upload-an-excel-file-and-get-results-for-all-items",
               "account-and-platform-features/can-i-use-generated-images-and-videos-commercially",
-              "account-and-platform-features/cant-find-a-particular-gpt-from-chatgptcom",
               "account-and-platform-features/do-your-ai-models-have-internet-access",
               "account-and-platform-features/how-can-i-request-a-new-feature",
               "account-and-platform-features/how-can-i-save-my-prompts",
@@ -77,8 +77,7 @@
               "account-and-platform-features/what-is-the-memories-feature-in-chat",
               "account-and-platform-features/what-models-are-used-in-agent-chat",
               "account-and-platform-features/when-i-sign-in-it-says-i-have-been-banned",
-              "account-and-platform-features/where-is-the-logout-button",
-              "account-and-platform-features/which-gpt-versions-are-available"
+              "account-and-platform-features/where-is-the-logout-button"
             ]
           },
           {
@@ -167,7 +166,9 @@
             "icon": "plug",
             "expanded": true,
             "root": "integrations-and-api/do-you-have-an-api",
-            "pages": []
+            "pages": [
+              "integrations-and-api/do-you-have-an-mcp-server"
+            ]
           },
           {
             "group": "Troubleshooting & Technical Issues",
@@ -192,7 +193,7 @@
       {
         "product": "API/MCP Docs",
         "description": "Developer API, MCP, and automation documentation.",
-        "icon": "code-2",
+        "icon": "terminal",
         "href": "https://magica.com/docs"
       }
     ]

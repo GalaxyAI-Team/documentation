@@ -94,8 +94,8 @@ function renderDocsJson(categories) {
   docsJson.description =
     "Guides and answers for Magica account access, billing, credits, tools, privacy, and troubleshooting.";
   docsJson.logo = {
-    dark: "/logo/logo_dark_theme.svg",
-    light: "/logo/logo_light_theme.svg",
+    dark: "/logo/dark.svg",
+    light: "/logo/light.svg",
   };
   docsJson.favicon = "/logo/icon.png";
   docsJson.colors = {
@@ -122,7 +122,7 @@ function renderDocsJson(categories) {
       {
         product: "API/MCP Docs",
         description: "Developer API, MCP, and automation documentation.",
-        icon: "code-2",
+        icon: "terminal",
         href: "https://magica.com/docs",
       },
     ],
