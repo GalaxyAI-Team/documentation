@@ -1,14 +1,18 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Galaxy.ai Help Center",
-  "description": "Guides and answers for Galaxy.ai — the AI platform giving you access to 5,000+ AI tools in one subscription.",
-  "colors": {
-    "primary": "#6C47FF",
-    "light": "#EDE9FF",
-    "dark": "#3B1FA8"
+  "name": "Magica Help Center",
+  "description": "Guides and answers for Magica — the AI platform giving you access to 5,000+ AI tools in one subscription.",
+  "logo": {
+    "dark": "/logo/logo_dark_theme.svg",
+    "light": "/logo/logo_light_theme.svg"
   },
-  "favicon": "https://icons.duckduckgo.com/ip3/help.galaxy.ai.ico",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5"
+  },
+  "favicon": "/logo/icon.png",
   "icons": {
     "library": "lucide"
   },
@@ -108,13 +112,13 @@
     "links": [
       {
         "label": "Contact Support",
-        "href": "https://galaxy.ai/support"
+        "href": "https://magica.com/support"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Go to Galaxy.ai",
-      "href": "https://galaxy.ai"
+      "label": "Go to Magica",
+      "href": "https://magica.com"
     }
   }
 }

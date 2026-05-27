@@ -1,7 +1,7 @@
 {
   "projectType": "saas",
-  "projectName": "Galaxy.ai",
-  "projectDescription": "Galaxy.ai is an AI aggregator platform that provides a single subscription for access to 5,000+ AI tools including ChatGPT, Gemini, Claude, image generators, video creators, and more.",
+  "projectName": "Magica",
+  "projectDescription": "Magica is an AI aggregator platform that provides a single subscription for access to 5,000+ AI tools including ChatGPT, Gemini, Claude, image generators, video creators, and more.",
   "theme": "almond",
   "primaryColor": "#6C47FF",
   "lightColor": "#EDE9FF",
@@ -94,15 +94,15 @@
     "100% private — data never used for training"
   ],
   "publicApiSurface": [
-    "galaxy.ai/docs — API documentation",
-    "galaxy.ai/usage — Credit usage dashboard",
-    "galaxy.ai/saved-prompts — Prompt management",
-    "galaxy.ai/refer — Affiliate program signup",
-    "affiliates.galaxy.ai — Affiliate dashboard",
-    "galaxy.ai/pricing — Subscription plans",
-    "galaxy.ai/support — Support ticket system",
-    "galaxy.ai/feature-requests — Feature request portal",
-    "galaxy.ai/delete-account — Account deletion",
-    "go.galaxy.ai/invoice — Invoice management"
+    "magica.com/docs — API documentation",
+    "magica.com/usage — Credit usage dashboard",
+    "magica.com/saved-prompts — Prompt management",
+    "magica.com/refer — Affiliate program signup",
+    "affiliates.magica.com — Affiliate dashboard",
+    "magica.com/pricing — Subscription plans",
+    "magica.com/support — Support ticket system",
+    "magica.com/feature-requests — Feature request portal",
+    "magica.com/delete-account — Account deletion",
+    "go.magica.com/invoice — Invoice management"
   ]
 }

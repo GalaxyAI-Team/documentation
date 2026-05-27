@@ -14,8 +14,11 @@
 
 ## Terminology
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- Use "Magica" for the product name.
+- Use `magica.com` for the customer app and `magica.com/docs` for developer API docs.
+- Use `api.magica.com` only for API endpoints.
+- Do not introduce Galaxy.ai branding except when documenting historical rebrand context.
+- Treat `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk` as the operational customer support FAQ source and `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` as the developer API source.
 
 ## Style preferences
 
