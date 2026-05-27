@@ -1,0 +1,8 @@
+<!--
+title: Galaxy is rebranded as Magica ✨
+-->
+We've rebranded Galaxy to Magica. New name, same magic (now literally).
+
+Magica is the only AI super agent with access to a computer, browser, connectors to access your apps and services, retrieve your data, and take actions within connected services, plus the most capable AI models to run autonomously and get work done.
+
+Nothing else changes for your account. Your data, credits, history, and subscription remain safe, and there is nothing you need to do.

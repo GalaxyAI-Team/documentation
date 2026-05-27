@@ -1,0 +1,6 @@
+<!--
+title: A tool used millions of credits but didn't produce any output
+-->
+If a generation failed completely (no output was produced), credits are automatically refunded within 24–48 business hours. Verify refunded credits here: [magica.com/usage?show=credited](https://magica.com/usage?show=credited)
+
+If a generation completed but the output wasn't as expected, credits are not refundable as per our policy.

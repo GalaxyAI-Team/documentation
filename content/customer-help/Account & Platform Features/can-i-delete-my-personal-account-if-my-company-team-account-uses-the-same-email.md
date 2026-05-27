@@ -1,0 +1,4 @@
+<!--
+title: Can I delete my personal account if my company team account uses the same email?
+-->
+No — deleting the personal account will revoke access tied to that email, including company team access. Always secure your company team access independently before deleting any account.

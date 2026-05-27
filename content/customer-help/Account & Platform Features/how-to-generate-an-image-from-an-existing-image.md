@@ -1,0 +1,9 @@
+<!--
+title: How to generate an image from an existing image?
+-->
+Try any of these:
+
+1. Image-to-Image Generator: [image.magica.com/ai-image-to-image](https://image.magica.com/ai-image-to-image)
+2. Image Variations Generator: [image.magica.com/ai-image-variation-generator](https://image.magica.com/ai-image-variation-generator)
+3. AI Image Editor: [image.magica.com/ai-image-editor](https://image.magica.com/ai-image-editor)
+4. AI Image Generator (with several models supporting image-to-image)

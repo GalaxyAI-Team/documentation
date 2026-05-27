@@ -1,0 +1,12 @@
+<!--
+title: Are the generated videos and images visible to the public?
+-->
+All user-generated media (text, images, videos) is private by default. Only you can access it.
+
+* Magica respects user privacy and does not share your content publicly.
+* After 30 days, older media may be auto-deleted (see FAQ on generation history).
+
+**Troubleshooting & Tips**
+
+* If you need to share content publicly, you can download it and share externally.
+* For critical assets, download them within the 30-day window.

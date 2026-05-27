@@ -1,0 +1,6 @@
+<!--
+title: Do you offer discounts for non-profits and educational organizations?
+-->
+Yes — eligible non-profits and educational institutions can get a **50% discount** on team plans (min. 5 members). Contact **sales@magica.com** with proof of status.
+
+*Not applicable to lifetime plans.*

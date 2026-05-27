@@ -1,0 +1,12 @@
+<!--
+title: How long do my generation history stay visible?
+-->
+Media (images, videos, audio, etc.) is stored for **30 days**. After that, it is automatically removed from the system.
+
+* This limit helps maintain server efficiency and manage storage costs.
+* If you want to keep your generated media, **download it** within the 30-day window.
+
+**Troubleshooting & Tips**
+
+* If media is missing earlier than expected, check if you had multiple accounts.
+* Always back up important creations immediately.

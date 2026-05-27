@@ -1,0 +1,4 @@
+<!--
+title: How do I upgrade to lifetime access?
+-->
+Visit [magica.com/pricing](https://magica.com/pricing) directly — the Lifetime upgrade option is on the pricing page, not in account settings.

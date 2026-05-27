@@ -1,0 +1,4 @@
+<!--
+title: Does Lifetime mean unlimited credits?
+-->
+No — Lifetime access gives you **15 million credits per month for life**, not unlimited credits. They renew automatically every month. If you ever need more, you can purchase additional credits.

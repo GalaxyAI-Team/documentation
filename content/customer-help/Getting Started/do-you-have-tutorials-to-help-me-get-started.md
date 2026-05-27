@@ -1,0 +1,8 @@
+<!--
+title: Do you have tutorials to help me get started?
+-->
+Absolutely! 🙌 We've got step-by-step tutorials to walk you through everything—from generating images, videos, and more.
+
+Subscribe to our YouTube channel here: [https://www.youtube.com/@Magica](https://www.youtube.com/@Magica) for regular tips, walkthroughs, and deep dives.
+
+Want tool-specific guides? Check out our dedicated playlist: [Watch the tutorials](https://www.youtube.com/playlist?list=PLK8aGlqdU4lkzshHgNJ26Z56TyGqMbPvu) 🎥

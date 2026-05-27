@@ -18,7 +18,9 @@
 - Use `magica.com` for the customer app and `magica.com/docs` for developer API docs.
 - Use `api.magica.com` only for API endpoints.
 - Do not introduce Galaxy.ai branding except when documenting historical rebrand context.
-- Treat `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk` as the operational customer support FAQ source and `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` as the developer API source.
+- Edit customer-facing articles only in `content/customer-help`.
+- Run `node scripts/render-customer-help.mjs` after changing customer-facing articles. It generates Mintlify pages in `help/` and Crisp Markdown in `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk`.
+- Treat `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` as the developer API source for API names, links, and images.
 
 ## Style preferences
 

@@ -1,0 +1,5 @@
+<!--
+title: Do I get charged for failed generations?
+-->
+Nope—don’t worry at all. If something doesn’t work or fails to generate, you’re **not** charged for it. Only successful generations count against your credits.
+You can always keep an eye on your usage here: [https://magica.com/usage](https://magica.com/usage). And if something seems off, just reach out—we’re always happy to help make things right.

@@ -1,0 +1,8 @@
+<!--
+title: How do I get free reward credits?
+-->
+Free reward credits are available exclusively for paid subscribers at [magica.com/free-credits](https://magica.com/free-credits):
+
+1. **Task Rewards** — Earn credits by completing simple tasks like writing reviews or creating content.
+
+The old daily scratch card and streak reward flow has been retired.

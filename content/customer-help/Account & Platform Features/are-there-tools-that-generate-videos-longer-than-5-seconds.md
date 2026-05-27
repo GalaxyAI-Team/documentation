@@ -1,0 +1,11 @@
+<!--
+title: Are there tools that generate videos longer than 5 seconds?
+-->
+Yes. For longer videos, try:
+
+* [AI Talking Photo](https://video.magica.com/ai-talking-photo)
+* [AI YouTube Video Maker](https://video.magica.com/ai-youtube-video-maker)
+* [AI Instagram Reel Generator](https://video.magica.com/ai-instagram-reel-generator)
+* [AI Podcast Video Generator](https://video.magica.com/ai-podcast-video-generator)
+* [AI Talking Baby Video Generator](https://video.magica.com/ai-talking-baby-video-generator)
+* [AI UGC Ads Video Generator](https://video.magica.com/ai-ugc-ads-video-generator)

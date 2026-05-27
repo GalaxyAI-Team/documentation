@@ -1,0 +1,6 @@
+<!--
+title: Can I try it out before I decide to pay?
+-->
+You can choose the **monthly plan** to test the full experience for only $15. We don’t offer full free access to all tools upfront—it wouldn’t be fair to our paying members, and it would water down the quality for everyone. Every decision we make is with our customers in mind, and we genuinely want you to succeed—because your success is our success.
+
+To get started, create an account here: [https://magica.com/sign-up](https://magica.com/sign-up)

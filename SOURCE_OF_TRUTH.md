@@ -6,16 +6,16 @@ This repository is the public customer help center for Magica. It should explain
 
 The developer API documentation lives in `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` and is published separately at `https://magica.com/docs`.
 
-The Crisp helpdesk source lives in `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk`. Crisp is operational support content and directly trains the AI chatbot.
+The canonical editable customer-help articles live in `content/customer-help`. The Mintlify help center and the Crisp helpdesk are both generated from that folder.
 
 ## Canonical sources
 
-Use these sources in order when updating customer docs:
+Use these sources in order when updating canonical customer-help articles:
 
 1. Production app links and routes in the latest code.
 2. `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs` for API names, API URLs, API logos, and developer-doc links.
-3. `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk` for short customer-support answers and chatbot language.
-4. Existing files in this repository only when the content is still aligned with the sources above.
+3. Current Crisp helpdesk wording for short customer-support answers and chatbot language.
+4. Generated files in this repository only to inspect output. Do not edit generated pages directly.
 
 ## Brand and URL rules
 
@@ -31,50 +31,51 @@ Do not use Galaxy.ai branding except in a dedicated rebrand article or migration
 
 ## Single-source system design
 
-Maintain a canonical article inventory with stable article IDs, audiences, and destinations:
+Maintain one canonical article inventory in `content/customer-help`:
 
-- `customer-docs`: long-form Mintlify pages in this repository.
-- `crisp`: concise FAQ articles in `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk`.
-- `api-docs`: developer references in `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs`.
+- Source: `content/customer-help/{Category}/{slug}.md`.
+- Mintlify output: generated `help/{category-slug}/{slug}.mdx`.
+- Crisp output: generated `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk/{Category}/{slug}.md`.
+- API docs remain separate developer references in `/Users/rajatgupta/Downloads/g-repo/app.galaxy.ai/api-docs`.
 
-For shared customer knowledge, the canonical facts should be represented once as structured article metadata and reusable Markdown sections, then rendered into both destinations:
+For shared customer knowledge, canonical facts are represented once in the source Markdown, then rendered into both destinations:
 
-- Mintlify gets expanded guides, cross-links, cards, accordions, and navigation.
-- Crisp gets short answers optimized for support search and chatbot training.
+- Mintlify gets MDX pages and navigation.
+- Crisp gets Markdown articles optimized for support search and chatbot training.
 
-Recommended repo layout for the shared layer:
+Current layout:
 
 ```text
-work/knowledge/customer-support/
-+-- articles/
-|   +-- billing.cancel-subscription.md
-|   +-- credits.how-credits-work.md
-|   +-- troubleshooting.login-issues.md
-+-- snippets/
-|   +-- brand.md
-|   +-- support-links.md
-|   +-- api-links.md
-+-- registry.json
+content/customer-help/
++-- Account & Platform Features/
++-- Billing & Subscription/
++-- Credits & Usage Tracking/
++-- Data Privacy & Security/
++-- Getting Started/
++-- Integrations & API/
++-- Troubleshooting & Technical Issues/
+help/
++-- account-and-platform-features/
++-- billing-and-subscription/
++-- credits-and-usage-tracking/
 ```
 
-Each article should declare:
+Each source article uses the Crisp-compatible title header:
 
-```yaml
-id: billing.cancel-subscription
-title: Cancel your Magica subscription
-audiences: [customer]
-destinations: [customer-docs, crisp]
-sourcePriority: [app-routes, api-docs, crisp]
-owner: support
+```markdown
+<!--
+title: How do credits work?
+-->
+Magica uses a credits-based system...
 ```
 
 The sync pipeline should:
 
-1. Validate registry IDs, titles, links, and destination paths.
-2. Render Mintlify MDX into this repository.
-3. Render plain Markdown into `/Users/rajatgupta/Downloads/g-repo/work/crisp/helpdesk`.
+1. Edit only `content/customer-help`.
+2. Run `node scripts/render-customer-help.mjs`.
+3. Review generated Mintlify pages under `help/`.
 4. Run `mint broken-links` for customer docs when Mintlify is available.
 5. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes.
-6. Require `python3 sync.py --push` only when intentionally publishing to Crisp.
+6. Run `python3 sync.py --push` only when intentionally publishing to Crisp.
 
 This keeps customer docs and Crisp aligned while preserving the different formats each destination needs.

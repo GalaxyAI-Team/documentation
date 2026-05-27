@@ -1,0 +1,4 @@
+<!--
+title: How long does it take to get headshots?
+-->
+Results are typically delivered within **1–2 hours** via email.

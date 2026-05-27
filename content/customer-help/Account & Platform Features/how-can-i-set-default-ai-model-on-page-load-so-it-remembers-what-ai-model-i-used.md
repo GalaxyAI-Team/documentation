@@ -1,0 +1,13 @@
+<!--
+title: How can I set default AI model on page load so it remembers what AI model I used?
+-->
+You can configure a default AI model in **Workspace Settings**, ensuring the same model loads each time you visit.
+
+* Click the **gear icon beside “Recent”** in the left sidebar.
+* In **Workspace Settings**, choose your preferred AI model (e.g., GPT-4, GPT-3.5 Turbo, etc.).
+* Changes persist across sessions once you save.
+
+**Troubleshooting & Tips**
+
+* If it reverts to a different model, ensure your browser isn’t blocking cookies or local storage.
+* Clear cache if your selection isn’t persisting.

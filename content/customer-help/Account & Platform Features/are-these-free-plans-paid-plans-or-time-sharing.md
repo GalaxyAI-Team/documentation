@@ -1,0 +1,4 @@
+<!--
+title: Are these free plans, paid plans, or time sharing?
+-->
+Magica is an AI aggregator — kind of like *Netflix for AI tools*. We partner directly with top AI providers (OpenAI, Anthropic, Google, Ideogram, etc.) to integrate the official paid versions. These are full paid plans, **not** free tiers or time-shared accounts.

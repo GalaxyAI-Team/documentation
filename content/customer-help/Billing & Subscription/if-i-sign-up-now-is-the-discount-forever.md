@@ -1,0 +1,6 @@
+<!--
+title: If I sign up now, is the discount forever?
+-->
+Yes — if you subscribe during our offer period, you'll keep the discounted rate as long as you maintain your active subscription without cancellation. This special pricing is locked in for lifetime, not just the first month or year.
+
+Future price increases don't affect existing subscribers who locked in the promotional rate.

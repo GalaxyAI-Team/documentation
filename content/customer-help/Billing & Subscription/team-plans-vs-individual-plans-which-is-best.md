@@ -1,0 +1,9 @@
+<!--
+title: Team Plans vs Individual Plans — which is best?
+-->
+**Individual Plans:** Designed for a single person with full access to all tools.
+
+**Team Plans:** Ideal for 5+ members, with collaboration features and centralized billing.
+
+* Individual Plans: [magica.com/pricing](https://magica.com/pricing)
+* Team Plans: [magica.com/create-organization](https://magica.com/create-organization)
