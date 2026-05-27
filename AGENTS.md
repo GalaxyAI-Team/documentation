@@ -55,6 +55,15 @@ After editing, adding, moving, or deleting an article:
 node content-dump/manage.mjs
 ```
 
+Preview Mintlify locally before deploying:
+
+```bash
+pnpm dev
+```
+
+This regenerates `docs.json` and starts Mintlify on `http://localhost:3333`.
+Use this for visual checks before `--deploy`.
+
 After committing and pushing documentation changes, trigger a Mintlify deployment:
 
 ```bash
@@ -109,13 +118,13 @@ cd /Users/rajatgupta/Downloads/g-repo/work/crisp
 python3 sync.py --push
 ```
 
-If Mintlify CLI is installed, also run:
+Validate Mintlify links locally:
 
 ```bash
-mint broken-links
+pnpm run check:links
 ```
 
-Do not run package-manager installs or builds for this docs workflow unless explicitly asked.
+Do not run package-manager installs or production builds for this docs workflow unless explicitly asked.
 
 ## Maintenance rules
 

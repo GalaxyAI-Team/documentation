@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "docs:generate": "node content-dump/manage.mjs",
+    "dev": "node content-dump/manage.mjs && node content-dump/mint-cli.mjs dev --port 3333",
+    "check:links": "node content-dump/manage.mjs && node content-dump/mint-cli.mjs broken-links"
+  }
+}

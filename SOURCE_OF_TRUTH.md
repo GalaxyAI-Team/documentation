@@ -73,9 +73,10 @@ The sync pipeline should:
 1. Edit only the root category article files.
 2. Run `node content-dump/manage.mjs`.
 3. Review Mintlify navigation in `docs.json`.
-4. Run `mint broken-links` for customer docs when Mintlify is available.
-5. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes directly from the same root category files.
-6. Run `python3 sync.py --push` only when intentionally publishing to Crisp.
-7. After committing and pushing documentation changes, run `node content-dump/manage.mjs --deploy` to trigger Mintlify. The API key must come from `.env` or `MINTLIFY_API_KEY`; never commit it.
+4. Run `pnpm dev` from `/Users/rajatgupta/Downloads/g-repo/work/documentation` and visually verify Mintlify locally at `http://localhost:3333`.
+5. Run `pnpm run check:links` for customer docs when Mintlify is available.
+6. Run `python3 sync.py` in `/Users/rajatgupta/Downloads/g-repo/work/crisp` to preview Crisp changes directly from the same root category files.
+7. Run `python3 sync.py --push` only when intentionally publishing to Crisp.
+8. After committing and pushing documentation changes, run `node content-dump/manage.mjs --deploy` to trigger Mintlify. The API key must come from `.env` or `MINTLIFY_API_KEY`; never commit it.
 
 This keeps customer docs and Crisp aligned while preserving the different formats each destination needs.
